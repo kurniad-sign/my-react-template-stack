@@ -1,14 +1,11 @@
 import shallow from 'zustand/shallow';
-import { useCounterStore } from './stores/index';
+import useStore from './stores';
 
 export default function App(): JSX.Element {
-  const [counter, increment, decrement] = useCounterStore(
-    (state) => [state.counter, state.increment, state.decrement],
-    shallow,
-  );
+  const { counter, increment, decrement } = useStore();
 
   return (
-    <div className="App">
+    <div>
       <h1>Hello World</h1>
       <p>{counter}</p>
       <button onClick={increment}>+</button>
