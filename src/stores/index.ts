@@ -2,11 +2,13 @@ import create from 'zustand';
 import { createSelectorHooks } from 'auto-zustand-selectors-hook';
 import { mountStoreDevtool } from 'simple-zustand-devtools';
 
+type ZustandSlice = Counter & BearSlice
+
 import CounterSlices, { Counter } from './counter';
 import createBearSlice, { BearSlice } from './bear-fishes';
 
 const useStore = createSelectorHooks(
-  create<Counter & BearSlice>()((...args) => ({
+  create<ZustandSlice>()((...args) => ({
     ...CounterSlices(...args),
     ...createBearSlice(...args),
   })),

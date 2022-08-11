@@ -1,9 +1,9 @@
-import { Title, Text } from './components';
+import { Title, Image, Text } from './core/components';
+
 import useStore from './stores';
 
 export default function App(): JSX.Element {
   const { counter, increment, decrement } = useStore();
-
   return (
     <div>
       <Title as="h1">Heading 1</Title>
@@ -13,9 +13,20 @@ export default function App(): JSX.Element {
       <Title as="h5">Heading 5</Title>
       <Title as="h6">Heading 6</Title>
       <Title>Save</Title>
-      <Text>Sample Text Underlined</Text>
-      <button onClick={increment}>+</button>
-      <button onClick={decrement}>-</button>
+      <Text size='md' align='right' weight='bold'>What the fuck counter {counter}</Text>
+      <button type="button" onClick={increment}>
+        +
+      </button>
+      <button type="button" onClick={decrement}>
+        -
+      </button>
+
+        <Image
+          src="https://images.unsplash.com/photo-1535025183041-0991a977e25b?w=300&dpr=2&q=80"
+          alt="Test"
+          fit="cover"
+        
+        />
     </div>
   );
 }

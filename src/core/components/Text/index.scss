@@ -1,0 +1,59 @@
+.Text {
+  font-size: 1.6rem;
+
+  &--x-small {
+    font-size: 0.8rem;
+  }
+
+  &--small {
+    font-size: 1.2rem;
+  }
+
+  &--medium {
+    font-size: 1.4rem;
+  }
+
+  &--large {
+    font-size: 1.8rem;
+  }
+
+  &--x-large {
+    font-size: 2rem;
+  }
+
+  &--light-w {
+    font-weight: 300;
+  }
+
+  &--regular-w {
+    font-weight: 400;
+  }
+
+  &--medium-w {
+    font-weight: 500;
+  }
+
+  &--bold-w {
+    font-weight: 700;
+  }
+
+  &--black-w {
+    font-weight: 900;
+  }
+
+  &--underlined {
+    text-decoration: underline;
+  }
+
+  &--left {
+    text-align: left;
+  }
+
+  &--center {
+    text-align: center;
+  }
+
+  &--right {
+    text-align: right;
+  }
+}
